@@ -1,0 +1,51 @@
+\documentclass[10.5pt,b5paper,openany]{book}
+\usepackage[boldfont,slantfont]{xeCJK}
+\setmainfont{Euclid}
+\setsansfont{Euclid}
+\setmonofont{Euclid}
+\setCJKmainfont{宋体}
+\setCJKsansfont{黑体}
+\setCJKmonofont{仿宋}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\newtheorem{kong}{\qquad \bf \!\!}
+\def\dh{、\!\!}
+\def\tdh{\text{、\!\!}}
+\def\tcdots{\,\!\cdots\!\,}
+\begin{document}
+    \renewcommand{\baselinestretch}{1.25}\normalsize
+    \setlength{\parindent}{2em}
+    \setlength{\abovedisplayskip}{1pt}
+    \setlength{\belowdisplayskip}{1pt}
+    \pagestyle{empty}
+    \begin{center}
+        {\bf \Large 北京大学中学生数学奖}
+
+        \vspace*{3mm}
+
+        {\bf \LARGE 个人能力挑战赛——试题}
+
+        \vspace*{3mm}
+
+        {\bf \Large 2016年7月}
+    \end{center}
+
+    {\bf 本试卷共4题, 每题30分, 满分120分. 考试时间180分钟.}
+
+    \begin{kong}\rm
+        已知锐角$\triangle ABC$中, $\angle B={60}^{\circ}$, $P$为$AB$中点, $Q$为外接圆上$AC$(不含点$B$)的中点, $H$为$\triangle ABC$的垂心. 如果$P\tdh H\tdh Q$三点共线, 求$\angle A$.
+    \end{kong}
+
+    \begin{kong}\rm
+        求所有的整系数多项式$P(x)$, 使得存在一个无穷项整数数列$\{a_n\}$, 其中任意两项互不相等, 且满足$$P(a_1)=0,P(a_{k+1})=a_k(k=1,2,\tcdots).$$
+    \end{kong}
+
+    \begin{kong}\rm
+        给定正整数$n$, 有$2n$张纸牌叠成一堆, 从上到下依次编号为$1\sim 2n$. 我们进行这样的操作: 每次将所有从上往下数偶数位置的牌抽出来, 保持顺序放到牌堆的下方. 例如$n=3$时, 初始顺序为123456, 操作后依次得到$$135246\tdh 154326\tdh 142536\tdh 123456.$$证明: 对任意正整数$n$, 操作不超过$2n-2$次后, 这堆牌的顺序会变回初始状态.
+    \end{kong}
+    
+    \begin{kong}\rm
+        给定正整数$p\tdh q$, 数列$\{a_n\}$满足$$a_1=a_2=1,a_{n+2}=pa_{n+1}+qa_n(n=1,2,\tcdots).$$求证: 要使得对任意正整数$m\tdh n$, 均有$(a_m,a_n)=a_{(m,n)}$, 当且仅当$p=1$时成立.
+    \end{kong}
+\end{document}
