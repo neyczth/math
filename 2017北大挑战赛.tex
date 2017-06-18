@@ -1,0 +1,95 @@
+\documentclass[10.5pt,a4paper,openany]{book}
+\usepackage[boldfont,slantfont]{xeCJK}
+\setmainfont{Euclid}
+\setsansfont{Euclid}
+\setmonofont{Euclid}
+\setCJKmainfont{宋体}
+\setCJKsansfont{黑体}
+\setCJKmonofont{仿宋}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\usepackage{pgf,tikz}
+\usetikzlibrary{calc,intersections}
+\usetikzlibrary{arrows,snakes,backgrounds}
+\usetikzlibrary{shapes.geometric}
+\pgfmathdeclarefunction{fix}{1}{\global \pgfmathunitsdeclaredfalse}
+\usepackage{caption}
+\newtheorem{kong}{\qquad \bf \!\!}
+\def\dh{、\!\!}
+\def\tdh{\text{、\!\!}}
+\def\leq{\leqslant}
+\def\geq{\geqslant}
+\def\tcdots{\,\!\cdots\!\,}
+\begin{document}
+    \renewcommand{\baselinestretch}{1.25}\normalsize
+    \setlength{\parindent}{2em}
+    \setlength{\abovedisplayskip}{1pt}
+    \setlength{\belowdisplayskip}{1pt}
+    \pagestyle{empty}
+    \begin{center}
+        {\bf \Large 北京大学中学生数学奖}
+
+        \vspace*{2mm}
+
+        {\bf \LARGE 个人能力挑战赛——试题}
+
+        \vspace*{2mm}
+
+        {\bf \Large 2017年6月}
+    \end{center}
+
+    {\bf 本试卷共4题, 每题30分, 满分120分. 考试时间180分钟.}
+
+    \begin{kong}\rm
+        给定正整数$n$和正实数$a_1,a_2,\tcdots ,a_n$. 如果对任意$1\leq k\leq n$, 均有$a_1a_2\cdots a_k\geq k!$, 求证:$$\frac{2!}{1+a_1}+\frac{3!}{(1+a_1)(2+a_2)}+\frac{4!}{(1+a_1)(2+a_2)(3+a_3)}+\cdots+\frac{(n+1)!}{(1+a_1)(2+a_2)\cdots (n+a_n)}<3.$$
+    \end{kong}
+
+    \begin{kong}\rm
+        如图, 已知$\triangle ABC$的内切圆$I$与三边分别切于$D\tdh E\tdh F$, 连结$BE\tdh CF$交于点$P$, 延长$DE$交直线$BA$于$M$, 延长$DF$交直线$CA$于$N$. 求证: $PI\perp MN$.
+
+        \begin{figure}[htbp]
+            \begin{center}
+                \begin{tikzpicture}[scale=1.5]
+                    \coordinate [label=below left:$B$] (B) at (0,0);
+                    \coordinate [label=below right:$C$] (C) at (4,0);
+                    \coordinate [label=right:$A$] (A) at (1.6,1.8);
+                    \path
+                    let \p1=($(A)-(B)$),\p2=($(A)-(C)$),\n1={veclen(\x1,\y1)},\n2={veclen(\x2,\y2)}
+                    in coordinate (I1) at ($(B)!fix(\n1/(\n1+\n2))!(C)$);
+                    \path
+                    let \p1=($(B)-(I1)$),\p2=($(B)-(A)$),\n1={veclen(\x1,\y1)},\n2={veclen(\x2,\y2)}
+                    in coordinate [label=below:$I$] (I) at ($(I1)!fix(\n1/(\n1+\n2))!(A)$);
+                    \coordinate [label=below:$D$] (D) at ($(B)!(I)!(C)$);
+                    \coordinate [label=left:$F$] (F) at ($(B)!(I)!(A)$);
+                    \coordinate [label=right:$E$] (E) at ($(A)!(I)!(C)$);
+                    \draw
+                    let \p1=($(I)-(D)$),\n1={veclen(\x1,\y1)}
+                    in (I) circle (\n1);
+                    \coordinate [label=above:$P$] (P) at (intersection of B--E and C--F);
+                    \coordinate [label=above:$M$] (M) at (intersection of D--E and B--A);
+                    \coordinate [label=above:$N$] (N) at (intersection of D--F and C--A);
+                    \draw (B)--(M)--(N)--(C)--cycle (N)--(D)--(M) (B)--(E) (C)--(F) (I)--(P);
+                    \foreach \point in {N,M,A,E,F,P,I,B,D,C}
+                    \fill (\point) circle (1/1.5pt);
+                \end{tikzpicture}
+            \end{center}
+        \end{figure}
+    \end{kong}
+
+    \vspace*{-8mm}
+
+    \begin{kong}\rm
+        数列$\{x_n\}$满足: $x_1\in\mathbf{R_+},x_{n+1}=\sqrt{5}x_n+2\sqrt{x_n^2+1}(n=1,2,\tcdots)$. 试问: 在$x_1,x_2,\tcdots,x_{2016}$中, 至少有多少个无理数?
+    \end{kong}
+
+    \begin{kong}\rm
+        现有20个砝码(质量允许相同), 可以用它们称出质量为1克\dh 2克\dh$\cdots$\dh 2017克的物体. 在满足下列条件时, 试求最重的砝码的最小可能质量:
+
+        (1)所有砝码的质量都是正整数;
+
+        (2)所有砝码的质量都是正有理数.
+
+        注: 称量时砝码只能放在天平左盘.
+    \end{kong}
+\end{document}
