@@ -1,0 +1,53 @@
+\documentclass[10.5pt,a4paper,openany]{book}
+\usepackage[boldfont,slantfont]{xeCJK}
+\setmainfont{Euclid}
+\setsansfont{Euclid}
+\setmonofont{Euclid}
+\setCJKmainfont{宋体}
+\setCJKsansfont{黑体}
+\setCJKmonofont{仿宋}
+\setCJKfamilyfont{hei}{黑体}
+\newcommand{\hei}{\CJKfamily{hei}}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\geometry{paperwidth=12cm,paperheight=14cm,left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm}
+\def\dh{、\!\!}
+\def\tdh{\text{、\!\!}}
+\def\leq{\leqslant}
+\def\geq{\geqslant}
+\begin{document}
+    \renewcommand{\baselinestretch}{1.25}\normalsize
+    \setlength{\parindent}{2em}
+    \setlength{\abovedisplayskip}{1pt}
+    \setlength{\belowdisplayskip}{1pt}
+    \pagestyle{empty}
+    若$a\tdh b\tdh c\in\mathbf{R_+},abc=1$. 求证:$$\bigg(a-1+\frac{1}{b}\bigg)\!\bigg(b-1+\frac{1}{c}\bigg)\!\bigg(c-1+\frac{1}{a}\bigg)\leq 1,$$并确定取等条件.
+
+    {\bf \hei 解: }设$a=\dfrac{y}{x},b=\dfrac{x}{z},c=\dfrac{z}{y}$, 其中$x\tdh y\tdh z\in\mathbf{R_+}$.
+
+    则只需证$$(y+z-x)(z+x-y)(x+y-z)\leq xyz.$$
+
+    记$y+z-x=u,z+x-y=v,x+y-z=w$, 则
+    $$\left\{
+        \begin{aligned}
+            u+v=2z>&\ 0,\\
+            v+w=2x>&\ 0,\\
+            w+u=2y>&\ 0.
+        \end{aligned}
+    \right.$$
+    故$u\tdh v\tdh w$中至多有一个负数.
+
+    情形1: 有一个负数. 则$uvw<0<xyz$, 命题得证.
+
+    情形2: $u\tdh v\tdh w$均正. 则
+    $$\left\{
+        \begin{aligned}
+            \!\sqrt{uv}\leq&\ \frac{u+v}{2}=z,\\
+            \!\sqrt{vw}\leq&\ \frac{v+w}{2}=x,\\
+            \!\sqrt{wu}\leq&\ \frac{w+u}{2}=y,
+        \end{aligned}
+    \right.$$
+    相乘得$uvw\leq xyz$.
+
+    综上, $uvw\leq xyz$, 即$$\bigg(a-1+\frac{1}{b}\bigg)\!\bigg(b-1+\frac{1}{c}\bigg)\!\bigg(c-1+\frac{1}{a}\bigg)\leq 1.$$由$u=v=w$得取等条件$$a=b=c=1.$$
+\end{document}

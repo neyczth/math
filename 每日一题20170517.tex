@@ -1,0 +1,61 @@
+\documentclass[10.5pt,a4paper,openany]{book}
+\usepackage[boldfont,slantfont]{xeCJK}
+\setmainfont{Euclid}
+\setsansfont{Euclid}
+\setmonofont{Euclid}
+\setCJKmainfont{宋体}
+\setCJKsansfont{黑体}
+\setCJKmonofont{仿宋}
+\setCJKfamilyfont{hei}{黑体}
+\setCJKfamilyfont{kai}{楷体}
+\newcommand{\hei}{\CJKfamily{hei}}
+\newcommand{\kai}{\CJKfamily{kai}}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\geometry{paperwidth=12cm,paperheight=20cm,left=0.5cm,right=0.5cm,top=0.5cm,bottom=0.5cm}
+\def\dh{、\!\!}
+\def\tdh{\text{、\!\!}}
+\def\leq{\leqslant}
+\def\geq{\geqslant}
+\begin{document}
+    \renewcommand{\baselinestretch}{1.25}\normalsize
+    \setlength{\parindent}{2em}
+    \setlength{\abovedisplayskip}{1pt}
+    \setlength{\belowdisplayskip}{1pt}
+    \begin{center}
+        {\bf \kai 每日一题20170517}
+    \end{center}
+
+    {\bf \hei 题: }设$a\tdh b\tdh n$与$\dfrac{n!}{a!b!}$都是正整数. 证明: $$a+b\leq n+1+2\log_2n.$$
+
+    {\kai (清华大学2015年全国优秀中学生数学物理体验营)}
+
+    {\bf \hei 证: }对于任意正整数$x$, 设$v_2(x)$表示$x!$所含因子2的个数, $s_2(x)$表示$x$在二进制表示下各位之和, 下证$$v_2(x)+s_2(x)=x.$$
+
+    {\kai 设$x=x_k\cdot 2^k+x_{k-1}\cdot 2^{k-1}+\cdots +x_1\cdot 2+x_0$, 则
+    \begin{align*}
+        v_2(x)=&\,\bigg[\frac{x}{2}\bigg]\!+\!\bigg[\frac{x}{2^2}\bigg]\!+\cdots +\!\bigg[\frac{x}{2^k}\bigg]\\
+        =&\ \big(x_k\cdot 2^{k-1}+x_{k-1}\cdot 2^{k-2}+\cdots +x_2\cdot 2+x_1\big)\\
+        +&\ \big(x_k\cdot 2^{k-2}+x_{k-1}\cdot 2^{k-3}+\cdots +x_3\cdot 2+x_2\big)\\
+        +&\,\cdots +(x_k\cdot 2+x_{k-1})+(x_k)\\
+        =&\ x_k\cdot\big(2^{k-1}+2^{k-2}+\cdots +1\big)\\
+        +&\ x_{k-1}\cdot\big(2^{k-2}+2^{k-3}+\cdots +1\big)\\
+        +&\,\cdots +x_2\cdot(2+1)+x_1\\
+        =&\ x_k\cdot\big(2^k-1\big)+x_{k-1}\cdot\big(2^{k-1}-1\big)\\
+        +&\,\cdots +x_2\cdot\big(2^2-1\big)+x_1\cdot (2-1)+x_0\cdot (1-1)\\
+        =&\ \big(x_k\cdot 2^k+x_{k-1}\cdot 2^{k-1}+\cdots +x_1\cdot 2+x_0\big)\\
+        -&\ (x_k+x_{k-1}+\cdots +x_0)\\
+        =&\ x-s_2(x).
+    \end{align*}
+    因此$v_2(x)+s_2(x)=x$.}
+
+    由$\dfrac{n!}{a!b!}$是正整数, 因此$$v_2(a)+v_2(b)\leq v_2(n),$$即$a-s_2(a)+b-s_2(b)\leq n-s_2(n)$.
+
+    由$s_2(x)$定义知对任意正整数$x$有$$1\leq s_2(x)<\log_2x+1.$$因此
+    \begin{align*}
+        a+b\leq&\ n-s_2(n)+s_2(a)+s_2(b)\\
+        <&\ n-1+(\log_2a+1)+(\log_2b+1)\\
+        =&\ n+1+(\log_2a+\log_2b)\\
+        <&\ n+1+2\log_2n.
+    \end{align*}
+\end{document}
