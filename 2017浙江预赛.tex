@@ -1,0 +1,134 @@
+\documentclass[10.5pt,a4paper,openany]{book}
+\usepackage[boldfont,slantfont]{xeCJK}
+\setmainfont{Euclid}
+\setsansfont{Euclid}
+\setmonofont{Euclid}
+\setCJKmainfont{宋体}
+\setCJKsansfont{黑体}
+\setCJKmonofont{仿宋}
+\setCJKfamilyfont{hei}{黑体}
+\setCJKfamilyfont{kai}{楷体}
+\setCJKfamilyfont{cu}{方正粗宋简体}
+\newcommand{\hei}{\CJKfamily{hei}}
+\newcommand{\kai}{\CJKfamily{kai}}
+\newcommand{\cu}{\CJKfamily{cu}}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\newtheorem{kong}{\qquad \bf \hei \!\!}
+\def\dh{、\!\!}
+\def\tdh{\text{、\!\!}}
+\def\leq{\leqslant}
+\def\geq{\geqslant}
+\def\tcdots{\,\!\cdots\!\,}
+\newcommand{\hx}[1]{\ \underline{\hspace{#1 cm}}\ }
+\newcommand{\xl}[1]{\text{\textbf{\textsl{#1}}}}
+\begin{document}
+    \renewcommand{\baselinestretch}{1.25}\normalsize
+    \setlength{\parindent}{2em}
+    \setlength{\abovedisplayskip}{1pt}
+    \setlength{\belowdisplayskip}{1pt}
+    \pagestyle{fancy}
+    \fancyhf{}
+    \fancyfoot[c]{\kai 2017年浙江省高中数学竞赛试题\qquad 第\thepage 页\quad 共\pageref{LastPage} 页}
+    \renewcommand{\headrulewidth}{0mm}
+    \begin{center}
+        {\LARGE \cu {\bf 2017}年浙江省高中数学竞赛试题}
+    \end{center}
+
+    {\kai 说明: 本试卷共15题, 10道填空题, 5道解答题. 填空题的答案和解答题的解答过程书写在答题纸上.}
+
+    \vspace*{3mm}
+
+    {\bf \hei 一\dh 填空题}(每题8分, 共80分)
+    
+    \begin{kong}\rm
+        在多项式${(x-1)}^3{(x+2)}^{10}$的展开式中$x^6$的系数为\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        已知$\log_{\sqrt{7}}(5a-3)=\log_{\sqrt{a^2+1}}5$, 则实数$a=$\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        设$f(x)=x^2+ax+b$在$[0,1]$中有两个实数根, 则$a^2-2b$的取值范围为\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        设$x,y\in\mathbf{R}$, 且$\dfrac{\sin^2x-\cos^2x+\cos^2x\cos^2y-\sin^2x\sin^2y}{\sin(x+y)}=1$, 则$x-y=$\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        已知两个命题.
+        
+        命题$p$: 函数$f(x)=\log_ax(x>0)$单调递增.
+        
+        命题$q$: 函数$g(x)=x^2+ax+1>0(x\in\mathbf{R})$.
+        
+        若$p\vee q$为真命题, $p\wedge q$为假命题, 则实数$a$的取值范围为\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        设$S$是$\bigg(0,\dfrac{5}{8}\bigg)$中所有有理数的集合, 对最简分数$\dfrac{q}{p}\in S$(正整数$p,q$互质), 定义函数$$f\bigg(\frac{q}{p}\bigg)=\frac{q+1}{p},$$则$f(x)=\dfrac{2}{3}$在$S$中根的个数为\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        已知动点$P\tdh M\tdh N$分别在$x$轴上\dh 圆${(x-1)}^2+{(y-2)}^2=1$上和圆${(x-3)}^2+{(y-4)}^2=3$上, 则$|PM|+|PN|$的最小值为\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        已知棱长为1的正四面体$P-ABC$, $PC$的中点为$D$, 动点$E$在线段$AD$上, 则直线$BE$与平面$ABC$所成的角的取值范围为\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        已知平面向量$\xl{a},\xl{b},\xl{c}$满足$|\xl{a}|=1,|\xl{b}|=2,|\xl{c}|=3,0<\lambda<1$. 若$\xl{b}\cdot\xl{c}=0$, 则$\big|\xl{a}-\lambda\xl{b}-(1-\lambda)\xl{c}\big|$所有取不到的值的集合为\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        已知
+        $f(x)=\!
+        \begin{cases}
+            -2x,&x<0,\\
+            x^2-1,&x\geq 0,
+        \end{cases}$
+        方程$f(x)+2\sqrt{1-x^2}+\Big|f(x)-2\sqrt{1-x^2}\Big|-2ax-4=0$有三个实根$x_1<x_2<x_3$. 若$x_3-x_2=2(x_2-x_1)$, 则实数$a=$\hx{2}.
+    \end{kong}
+
+    {\bf \hei 二\dh 解答题}(共120分)
+
+    \begin{kong}\rm
+        {\kai (本题满分20分)}
+
+        设$f_1(x)=\sqrt{x^2+32},f_{n+1}(x)=\sqrt{x^2+\dfrac{16}{3}f_n(x)},n=1,2,\cdots$. 对每个$n$, 求$f_n(x)=3x$的实数解.
+    \end{kong}
+
+    \begin{kong}\rm
+        {\kai (本题满分20分)}
+
+        已知椭圆$\dfrac{x^2}{6}+\dfrac{y^2}{2}=1$的右焦点为$F$, 过$F$的直线$y=k(x-2)$交椭圆于$P\tdh Q$两点($k\neq 0$). 若$PQ$的中点为$N$, $O$为原点, 直线$ON$交直线$x=3$于$M$.
+
+        (1)求$\angle MFQ$的大小;
+
+        (2)求$\dfrac{PQ}{MF}$的最大值.
+    \end{kong}
+
+    \begin{kong}\rm
+        {\kai (本题满分20分)}
+
+        设数列$\{a_n\}$满足:$$|a_{n+1}-2a_n|=2,|a_n|\leq 2,n=1,2,3,\tcdots .$$证明: 如果$a_1$为有理数, 则从某项后$\{a_n\}$为周期数列.
+    \end{kong}
+
+    \begin{kong}\rm
+        {\kai (本题满分30分)}
+
+        设$a_1,a_2,a_3,b_1,b_2,b_3\in\mathbf{N^*}$, 证明: 存在不全为零的数$\lambda_1,\lambda_2,\lambda_3\in\{0,1,2\}$, 使得$\lambda_1a_1+\lambda_2a_2+\lambda_3a_3$和$\lambda_1b_1+\lambda_2b_2+\lambda_3b_3$同时被3整除.
+    \end{kong}
+
+    \begin{kong}\rm
+        {\kai (本题满分30分)}
+
+        设$\sigma=\{a_1,a_2,\tcdots,a_n\}$为$\{1,2,\tcdots,n\}$的一个排列, 记$F(\sigma)=\displaystyle{\sum_{i=1}^na_ia_{i+1}},a_{n+1}=a_1$, 求$\min F(\sigma)$.
+    \end{kong}
+\end{document}
