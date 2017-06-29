@@ -1,0 +1,153 @@
+\documentclass[10.5pt,a4paper,openany]{book}
+\usepackage[boldfont,slantfont]{xeCJK}
+\setmainfont{Euclid}
+\setsansfont{Euclid}
+\setmonofont{Euclid}
+\setCJKmainfont{宋体}
+\setCJKsansfont{黑体}
+\setCJKmonofont{仿宋}
+\setCJKfamilyfont{hei}{黑体}
+\setCJKfamilyfont{kai}{楷体}
+\setCJKfamilyfont{cu}{方正粗宋简体}
+\newcommand{\hei}{\CJKfamily{hei}}
+\newcommand{\kai}{\CJKfamily{kai}}
+\newcommand{\cu}{\CJKfamily{cu}}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{pgf,tikz}
+\usetikzlibrary{calc,intersections}
+\usetikzlibrary{arrows,snakes,backgrounds}
+\usetikzlibrary{shapes.geometric}
+\pgfmathdeclarefunction{fix}{1}{\global \pgfmathunitsdeclaredfalse}
+\def\dh{、\!\!}
+\def\tdh{\text{、\!\!}}
+\def\i{\mathrm{i}}
+\def\yjt{\overrightarrow}
+\def\tcdots{\,\!\cdots\!\,}
+\newcommand{\hx}[1]{\ \underline{\hspace{#1 cm}}\ }
+\newcommand{\qs}[1]{\raisebox{-0.2ex}{\textcircled{\small #1}}}
+\newtheorem{kong}{\qquad \bf \hei \!\!}
+\begin{document}
+    \renewcommand{\baselinestretch}{1.25}\normalsize
+    \setlength{\parindent}{2em}
+    \setlength{\abovedisplayskip}{1pt}
+    \setlength{\belowdisplayskip}{1pt}
+    \pagestyle{fancy}
+    \fancyhf{}
+    \fancyfoot[c]{\kai 2017年全国高中数学联赛江苏赛区预赛\qquad 第\thepage 页\quad 共\pageref{LastPage} 页}
+    \renewcommand{\headrulewidth}{0mm}
+    \begin{center}
+        {\LARGE \cu {\bf 2017}年全国高中数学联赛江苏赛区预赛}
+    \end{center}
+
+    {\bf \hei 一\dh 填空题}(每题7分, 共70分)
+
+    \begin{kong}\rm
+        已知向量$\yjt{AP}=\!\big(1,\sqrt{3}\big),\yjt{PB}=\!\big(\!-\!\!\sqrt{3},1\big)$, 则$\yjt{AP}$和$\yjt{AB}$的夹角等于\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        已知集合$A=\!\big\{x\mid (ax-1)(a-x)>0\big\}$, 且$2\in A,3\not\in A$, 则实数$a$的取值范围是\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        已知复数$z=\cos\dfrac{2\pi}{3}+\i\sin\dfrac{2\pi}{3}$, 其中$\i$为虚数单位, 则$z^3+z^2=$\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        在平面直角坐标系$xOy$中, 设$F_1\tdh F_2$分别是双曲线$\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1(a>0,b>0)$的左\dh 右焦点, $P$是双曲线右支上一点, $M$是$PF_2$的中点, 且$OM\perp PF_2,3PF_1=4PF_2$, 则双曲线的离心率为\hx{1.4}.
+    \end{kong}
+
+    \begin{kong}\rm
+        定义区间$[x_1,x_2]$的长度为$x_2-x_1$. 若函数$y=|\!\log_2x|$定义域为$[a,b]$, 值域为$[0,2]$, 则区间$[a,b]$长度的最大值与最小值 的差为\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        若关于$x$的二次方程$mx^2+(2m-1)x-m+2=0(m>0)$的两个互异的根都小于1, 则实数$m$的取值范围是\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        若$\tan 4x=\dfrac{\sqrt{3}}{3}$, 则$\dfrac{\sin 4x}{\cos 8x\cos 4x}+\dfrac{\sin 2x}{\cos 4x\cos 2x}+\dfrac{\sin x}{\cos 2x\cos x}+\dfrac{\sin x}{\cos x}=$\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        棱长为2的正方体$ABCD-A_1B_1C_1D_1$在空间直角坐标系$O-xyz$中运动, 其中顶点$A$保持在$z$轴上, 顶点$B_1$保持在平面$xOy$上, 则$OC$长度的最小值是\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        设数列$a_1,a_2,a_3,\tcdots ,a_{21}$满足: $|a_{n+1}-a_n|=1(n=1,2,3,\tcdots,20)$, $a_1,a_7,a_{21}$成等比数列. 若$$a_1=1,a_{21}=9,$$则满足条件的不同数列的个数为\hx{2}.
+    \end{kong}
+
+    \begin{kong}\rm
+        对于某些正整数$n$, 分数$\dfrac{n+2}{3n^2+7}${\hei 不是}既约分数, 则$n$的最小值是\hx{2}.
+    \end{kong}
+
+    {\bf \hei 二\dh 解答题}(每题20分, 共80分)
+
+    \begin{kong}\rm
+        设数列$\{a_n\}$满足: \qs{1}$a_1=1$; \qs{2}$a_n>0$; \qs{3}$a_n=\dfrac{na_{n+1}^2}{na_{n+1}+1},n\in\mathbf{N^*}$. 求证:
+
+        (1)数列$\{a_n\}$是递增数列;
+
+        (2)对任意正整数$n$, $a_n<1+\displaystyle{\sum_{k=1}^n\frac{1}{k}}$.
+    \end{kong}
+
+    \begin{kong}\rm
+        在平面直角坐标系$xOy$中, 设椭圆$E:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1(a>b>0)$, 直线$l:x+y-3a=0$. 若椭圆$E$的离心率为$\dfrac{\sqrt{3}}{2}$, 原点$O$到直线$l$的距离为$3\sqrt{2}$.
+
+        (1)求椭圆$E$与直线$l$的方程;
+
+        (2)若椭圆$E$上三点$P\tdh A(0,b)\tdh B(a,0)$到直线$l$的距离分别为$d_1,d_2,d_3$. 求证: $d_1,d_2,d_3$可以是某三角形三条边的边长.
+    \end{kong}
+
+    \begin{kong}\rm
+        如图, 圆$O$是四边形$ABCD$的内切圆, 切点分别为$P\tdh Q\tdh R\tdh S$, $OA$与$PS$交于点$A_1$, $OB$与$PQ$交于点$B_1$, $OC$与$QR$交于点$C_1$, $OD$与$SR$交于点$D_1$. 求证: 四边形$A_1B_1C_1D_1$是平行四边形.
+    \end{kong}
+
+    \begin{kong}\rm
+        求满足$x^3-x=y^7-y^3$的所有素数$x$和$y$.
+    \end{kong}
+
+    \newpage
+
+    \begin{figure}[htbp]
+        \begin{center}
+            \begin{tikzpicture}[scale=2]
+                \clip (-0.5,-0.5) rectangle (3.2,2.8);
+                \coordinate [label=below left:$A$] (A) at (0,0);
+                \coordinate [label=below right:$B$] (B) at (3,0);
+                \coordinate [label=above left:$D$] (D) at (1,2.4);
+                \path [name path=a] (B) circle (2.2);
+                \path [name path=b] (D) circle (1.8);
+                \path [name intersections={of=a and b}];
+                \coordinate [label=above right:$C$] (C) at (intersection-2);
+                \path
+                let \p1=($(A)-(B)$),\p2=($(A)-(D)$),\n1={veclen(\x1,\y1)},\n2={veclen(\x2,\y2)}
+                in coordinate (O1) at ($(B)!fix(\n1/(\n1+\n2))!(D)$);
+                \path
+                let \p1=($(D)-(A)$),\p2=($(D)-(C)$),\n1={veclen(\x1,\y1)},\n2={veclen(\x2,\y2)}
+                in coordinate (O2) at ($(A)!fix(\n1/(\n1+\n2))!(C)$);
+                \coordinate (O3) at ($(D)!1.2!(O2)$);
+                \coordinate [label=right:$O$] (O) at (intersection of A--O1 and D--O3);
+                \coordinate [label=below:$P$] (P) at ($(A)!(O)!(B)$);
+                \coordinate [label=right:$Q$] (Q) at ($(B)!(O)!(C)$);
+                \coordinate [label=above:$R$] (R) at ($(C)!(O)!(D)$);
+                \coordinate [label=left:$S$] (S) at ($(D)!(O)!(A)$);
+                \draw
+                let \p1=($(O)-(P)$),\n1={veclen(\x1,\y1)}
+                in (O) circle (\n1);
+                \coordinate [label=below:$A_1$] (A_1) at (intersection of O--A and S--P);
+                \coordinate [label=below:$B_1$] (B_1) at (intersection of O--B and P--Q);
+                \coordinate [label=above:$C_1$] (C_1) at (intersection of O--C and Q--R);
+                \coordinate [label=above:$D_1$] (D_1) at (intersection of O--D and R--S);
+                \draw (A)--(B)--(C)--(D)--cycle (P)--(Q)--(R)--(S)--cycle (A_1)--(B_1)--(C_1)--(D_1)--cycle (A)--(O)--(C) (B)--(O)--(D);
+                \foreach \point in {A,B,C,D,O,P,Q,R,S,A_1,B_1,C_1,D_1}
+                    \fill (\point) circle (1/2pt);
+            \end{tikzpicture}\\
+            {\kai (第13题图)}
+        \end{center}
+    \end{figure}
+\end{document}
